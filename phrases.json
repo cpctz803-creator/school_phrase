@@ -1,0 +1,569 @@
+[
+  {
+    "id": 1,
+    "category": "School & Chill",
+    "phrase": "I'm cooked.",
+    "meaning": "マジで詰んだ / 終わった",
+    "situation": "テストの手応えがゼロの時、課題を出してない時。"
+  },
+  {
+    "id": 2,
+    "category": "School & Chill",
+    "phrase": "Let's chill.",
+    "meaning": "放課後たまろうぜ / ぶらぶらしよ",
+    "situation": "予定を決めずにマックやコンビニ前でだべる時に。"
+  },
+  {
+    "id": 3,
+    "category": "School & Chill",
+    "phrase": "Period.",
+    "meaning": "以上、終わり！",
+    "situation": "自分の主張を言い切る時。「〇〇が優勝。Period.」"
+  },
+  {
+    "id": 4,
+    "category": "School & Chill",
+    "phrase": "I'm dead.",
+    "meaning": "しんど笑 / ツボる",
+    "situation": "面白すぎて笑い死ぬ、または疲れ果てた時。"
+  },
+  {
+    "id": 5,
+    "category": "School & Chill",
+    "phrase": "Bet.",
+    "meaning": "おけ / 了解！",
+    "situation": "「了解」を極限まで短くした10代の超定番の返事。"
+  },
+  {
+    "id": 6,
+    "category": "School & Chill",
+    "phrase": "High key",
+    "meaning": "明らかに / ガチで",
+    "situation": "隠す気もなく堂々と「ガチで」と言う時に使います。"
+  },
+  {
+    "id": 7,
+    "category": "School & Chill",
+    "phrase": "Low key",
+    "meaning": "密かに / ちょっと",
+    "situation": "「実は密かに〇〇なんだよね」というニュアンス。"
+  },
+  {
+    "id": 8,
+    "category": "School & Chill",
+    "phrase": "I'm out.",
+    "meaning": "先帰るわ / 抜けるわ",
+    "situation": "部活や放課後の集まりからお先にドロンする時。"
+  },
+  {
+    "id": 9,
+    "category": "School & Chill",
+    "phrase": "Mood.",
+    "meaning": "それな / 分かるわ",
+    "situation": "相手の「だるい」などの感情に強く共感する時の相槌。"
+  },
+  {
+    "id": 10,
+    "category": "School & Chill",
+    "phrase": "What's up?",
+    "meaning": "うぃっす / 最近どう？",
+    "situation": "学校の廊下ですれ違いざまに交わす挨拶。"
+  },
+  {
+    "id": 11,
+    "category": "School & Chill",
+    "phrase": "My bad.",
+    "meaning": "わりぃ / すまん",
+    "situation": "軽いノリで謝る時の定番フレーズ。"
+  },
+  {
+    "id": 12,
+    "category": "School & Chill",
+    "phrase": "Chill out.",
+    "meaning": "落ち着けって / 焦んな",
+    "situation": "友達がテスト前にテンパっている時などに。"
+  },
+  {
+    "id": 13,
+    "category": "School & Chill",
+    "phrase": "Hold on.",
+    "meaning": "ちょっと待って",
+    "situation": "友達を引き留める時や、スマホを操作しながらの一言。"
+  },
+  {
+    "id": 14,
+    "category": "School & Chill",
+    "phrase": "No way.",
+    "meaning": "ありえない / マジで？",
+    "situation": "予想外の噂話や、テストの点数を見た時のリアクション。"
+  },
+  {
+    "id": 15,
+    "category": "School & Chill",
+    "phrase": "Same here.",
+    "meaning": "自分もそれ / 同じく",
+    "situation": "友達の意見や注文に「乗っかる」時の相槌。"
+  },
+  {
+    "id": 16,
+    "category": "School & Chill",
+    "phrase": "For real?",
+    "meaning": "ガチで？ / マジ？",
+    "situation": "相手の話を疑う、または驚いた時の聞き返し。"
+  },
+  {
+    "id": 17,
+    "category": "School & Chill",
+    "phrase": "Whatever.",
+    "meaning": "どっちでもいっしょ / なんでもいい",
+    "situation": "メニュー選びや放課後の行き先がどうでもいい時。"
+  },
+  {
+    "id": 18,
+    "category": "School & Chill",
+    "phrase": "Catch you later.",
+    "meaning": "またね / あとでね",
+    "situation": "放課後バイバイする時の定番の挨拶。"
+  },
+  {
+    "id": 19,
+    "category": "School & Chill",
+    "phrase": "I need to grind.",
+    "meaning": "ガチ勉しなきゃ / 追い込み",
+    "situation": "テスト前や受験勉強でガチで自習室にこもる時。"
+  },
+  {
+    "id": 20,
+    "category": "School & Chill",
+    "phrase": "Nailed it!",
+    "meaning": "完璧にできた！",
+    "situation": "テストや発表がバッチリうまくいった時のセリフ。"
+  },
+  {
+    "id": 21,
+    "category": "School & Chill",
+    "phrase": "I'm exhausted.",
+    "meaning": "ライフゼロ / 死にそう",
+    "situation": "体育の後や部活の練習がハードすぎて動けない時。"
+  },
+  {
+    "id": 22,
+    "category": "Gaming & Online",
+    "phrase": "That's fire!",
+    "meaning": "激アツ！ / ネ申",
+    "situation": "最高にカッコいいシーンや、新曲のMVを観た時に。"
+  },
+  {
+    "id": 23,
+    "category": "Gaming & Online",
+    "phrase": "GOAT",
+    "meaning": "史上最強 / 神",
+    "situation": "Greatest Of All Timeの略。大好きな配信者やキャラに。"
+  },
+  {
+    "id": 24,
+    "category": "Gaming & Online",
+    "phrase": "No cap.",
+    "meaning": "マジで / 嘘ナシで",
+    "situation": "本当の話であることを強調してタイムラインに書く時。"
+  },
+  {
+    "id": 25,
+    "category": "Gaming & Online",
+    "phrase": "W",
+    "meaning": "勝ち / ナイス！",
+    "situation": "Winの略。ゲームで勝った時や良いことがあった時に。"
+  },
+  {
+    "id": 26,
+    "category": "Gaming & Online",
+    "phrase": "L",
+    "meaning": "負け / 痛恨のミス",
+    "situation": "Loseの略。ミスった時や引きが最悪だった時に。"
+  },
+  {
+    "id": 27,
+    "category": "Gaming & Online",
+    "phrase": "Sus",
+    "meaning": "怪しい / チーターじゃね？",
+    "situation": "Suspiciousの略。人狼ゲームやネットで怪しい奴に対して。"
+  },
+  {
+    "id": 28,
+    "category": "Gaming & Online",
+    "phrase": "Flex",
+    "meaning": "見せびらかす / イキる",
+    "situation": "課金スキンやレアグッズをSNSで自慢する行為。"
+  },
+  {
+    "id": 29,
+    "category": "Gaming & Online",
+    "phrase": "Gamer moment",
+    "meaning": "ゲーマーあるある",
+    "situation": "ゲーム中に神プレイ（または大爆笑のミス）が出た瞬間。"
+  },
+  {
+    "id": 30,
+    "category": "Gaming & Online",
+    "phrase": "I'm lagging.",
+    "meaning": "ラグい / 固まった",
+    "situation": "ネット回線が重くてゲームや通話がカクつく時。"
+  },
+  {
+    "id": 31,
+    "category": "Gaming & Online",
+    "phrase": "AFK",
+    "meaning": "席外す / 離脱する",
+    "situation": "Away From Keyboardの略。チャットで「ちょっと離れる」。"
+  },
+  {
+    "id": 32,
+    "category": "Gaming & Online",
+    "phrase": "Clutch!",
+    "meaning": "大逆転！ / 神がかり",
+    "situation": "ゲームで絶体絶命のピンチから1人で勝ち切った時。"
+  },
+  {
+    "id": 33,
+    "category": "Gaming & Online",
+    "phrase": "GG",
+    "meaning": "お疲れ / 良い試合だった",
+    "situation": "Good Gameの略。マッチ終了時の挨拶。日常でも使う。"
+  },
+  {
+    "id": 34,
+    "category": "Gaming & Online",
+    "phrase": "Hype!",
+    "meaning": "テンション上がる / 楽しみすぎ",
+    "situation": "新作ゲームの発表やライブ前夜のワクワク感。"
+  },
+  {
+    "id": 35,
+    "category": "Gaming & Online",
+    "phrase": "Main character energy",
+    "meaning": "主人公オーラ",
+    "situation": "推しが画面に出てきた時の圧倒的な存在感を褒める。"
+  },
+  {
+    "id": 36,
+    "category": "Gaming & Online",
+    "phrase": "Rent free",
+    "meaning": "頭から離れない",
+    "situation": "好きな動画やミーム（ネタ）が脳内に居座っている状態。"
+  },
+  {
+    "id": 37,
+    "category": "Gaming & Online",
+    "phrase": "Stan",
+    "meaning": "ガチ恋 / 熱狂的ファン",
+    "situation": "元はストーカー＋ファンの造語。推し活の基本単語。"
+  },
+  {
+    "id": 38,
+    "category": "Gaming & Online",
+    "phrase": "Valid.",
+    "meaning": "アリだな / 間違いない",
+    "situation": "タイムラインの意見やセンスに「合格点」を出す時。"
+  },
+  {
+    "id": 39,
+    "category": "Gaming & Online",
+    "phrase": "Vouch.",
+    "meaning": "それ保証する / 間違いない",
+    "situation": "友達の「このゲーム神ゲー」という発言に同意する時。"
+  },
+  {
+    "id": 40,
+    "category": "Gaming & Online",
+    "phrase": "NPC",
+    "meaning": "モブキャラ / 意思のない奴",
+    "situation": "周りの意見に流されるだけの人を揶揄するネットスラング。"
+  },
+  {
+    "id": 41,
+    "category": "Gaming & Online",
+    "phrase": "On repeat",
+    "meaning": "無限リピート中",
+    "situation": "神曲すぎて、YouTubeでずっと同じ曲を聴いている時。"
+  },
+  {
+    "id": 42,
+    "category": "Drama & Mood",
+    "phrase": "It's not that deep.",
+    "meaning": "そこまで深く考えなくてよくね？",
+    "situation": "誰かが悩みすぎている時に「気にすんな」と流す。"
+  },
+  {
+    "id": 43,
+    "category": "Drama & Mood",
+    "phrase": "The drama is unreal.",
+    "meaning": "昼ドラ並みに泥沼",
+    "situation": "クラス内や部活の人間関係の揉め事がエグい時。"
+  },
+  {
+    "id": 44,
+    "category": "Drama & Mood",
+    "phrase": "I'm ghosted.",
+    "meaning": "既読スルーされた / 飛んだ",
+    "situation": "LINEの返信が急に来なくなって、ブロックされたっぽい時。"
+  },
+  {
+    "id": 45,
+    "category": "Drama & Mood",
+    "phrase": "It hits different.",
+    "meaning": "沁みる / エモさが違う",
+    "situation": "病んでる時に聴く音楽や、夜の空気感がいつもと違う時。"
+  },
+  {
+    "id": 46,
+    "category": "Drama & Mood",
+    "phrase": "I'm low key crying.",
+    "meaning": "地味に泣きそう",
+    "situation": "悲しい時だけでなく、嬉しすぎる時や笑いすぎた時も。"
+  },
+  {
+    "id": 47,
+    "category": "Drama & Mood",
+    "phrase": "Too much information (TMI)",
+    "meaning": "聞いてない / 情報過多",
+    "situation": "友達の恋バナが生々しすぎて「もういいわ！」となる時。"
+  },
+  {
+    "id": 48,
+    "category": "Drama & Mood",
+    "phrase": "I can't even.",
+    "meaning": "無理すぎる / 言葉が出ない",
+    "situation": "あまりのショック（あるいは爆笑）で感情が追いつかない。"
+  },
+  {
+    "id": 49,
+    "category": "Drama & Mood",
+    "phrase": "It's a hot mess.",
+    "meaning": "大惨事 / 目も当てられない",
+    "situation": "部屋が散らかり放題、または計画がグダグダな時。"
+  },
+  {
+    "id": 50,
+    "category": "Drama & Mood",
+    "phrase": "I'm stressing out.",
+    "meaning": "メンタル削れる / テンパる",
+    "situation": "提出物の締め切りや、発表会前で心臓がバクバクな時。"
+  },
+  {
+    "id": 51,
+    "category": "Drama & Mood",
+    "phrase": "Shook",
+    "meaning": "ショック / 動揺してる",
+    "situation": "予想外の推しの熱愛報道や、ガチの抜き打ちテストに。"
+  },
+  {
+    "id": 52,
+    "category": "Drama & Mood",
+    "phrase": "Salty",
+    "meaning": "不機嫌 / 拗ねてる",
+    "situation": "ゲームで負けてイライラしている友達をイジる時。"
+  },
+  {
+    "id": 53,
+    "category": "Drama & Mood",
+    "phrase": "I'm over it.",
+    "meaning": "もうどうでもいい / 吹っ切れた",
+    "situation": "嫌なことがあったけど、考えるのをやめた時のセリフ。"
+  },
+  {
+    "id": 54,
+    "category": "Drama & Mood",
+    "phrase": "It drains me.",
+    "meaning": "体力（精神）持っていかれる",
+    "situation": "苦手な授業や、気を遣う集まりの後にポツリと。"
+  },
+  {
+    "id": 55,
+    "category": "Drama & Mood",
+    "phrase": "Fake friend",
+    "meaning": "ネト友（うわべだけの友）",
+    "situation": "表向きは仲良しだけど、裏で愚痴を言ってるような関係。"
+  },
+  {
+    "id": 56,
+    "category": "Drama & Mood",
+    "phrase": "I'm hyperventilating.",
+    "meaning": "息が止まる / 死ぬ",
+    "situation": "推しと目が合った（気がした）時の限界オタクの表現。"
+  },
+  {
+    "id": 57,
+    "category": "Drama & Mood",
+    "phrase": "Give me a break.",
+    "meaning": "勘勘弁してよ / もういいって",
+    "situation": "親や先生にお説教をされて、うんざりしている時。"
+  },
+  {
+    "id": 58,
+    "category": "Drama & Mood",
+    "phrase": "It's annoying.",
+    "meaning": "うざい / だるい",
+    "situation": "スマホがバグったり、予定が狂ったりした時の不満。"
+  },
+  {
+    "id": 59,
+    "category": "Drama & Mood",
+    "phrase": "My energy is at zero.",
+    "meaning": "充電切れ / 動けん",
+    "situation": "1日中起きていて、一歩も動きたくない時のLINE。"
+  },
+  {
+    "id": 60,
+    "category": "Drama & Mood",
+    "phrase": "I'm internalizing.",
+    "meaning": "心の中で病んでる",
+    "situation": "表面上は笑っているけど、実はめちゃくちゃ気にしてる状態。"
+  },
+  {
+    "id": 61,
+    "category": "Drama & Mood",
+    "phrase": "Rude.",
+    "meaning": "なんだあいつ / 失礼な",
+    "situation": "誰かに意地悪なことを言われた時の、冷ややかな一言。"
+  },
+  {
+    "id": 62,
+    "category": "Short & Quick",
+    "phrase": "It's a vibe.",
+    "meaning": "エモい / 雰囲気優勝",
+    "situation": "インスタの写真や、部屋のライティングを褒める時。"
+  },
+  {
+    "id": 63,
+    "category": "Short & Quick",
+    "phrase": "Slay!",
+    "meaning": "イケてる！ / 最高！",
+    "situation": "友達の服装や髪型、キマってる自撮りへの大絶賛。"
+  },
+  {
+    "id": 64,
+    "category": "Short & Quick",
+    "phrase": "Fr",
+    "meaning": "それな（マジで）",
+    "situation": "For Realの略。タイムラインの意見への最強の相槌。"
+  },
+  {
+    "id": 65,
+    "category": "Short & Quick",
+    "phrase": "Ikr",
+    "meaning": "分かる（それな）",
+    "situation": "I Know Right?の略。チャットで超頻出の同意スタンプ代わり。"
+  },
+  {
+    "id": 66,
+    "category": "Short & Quick",
+    "phrase": "Ngl",
+    "meaning": "正直さ（ぶっちゃけ）",
+    "situation": "Not Gonna Lieの略。「ぶっちゃけ、これ微妙じゃね？」"
+  },
+  {
+    "id": 67,
+    "category": "Short & Quick",
+    "phrase": "Bff",
+    "meaning": "ズッ友",
+    "situation": "Best Friends Foreverの略。プリクラやストーリーの文字。"
+  },
+  {
+    "id": 68,
+    "category": "Short & Quick",
+    "phrase": "Idk",
+    "meaning": "しらん / わからん",
+    "situation": "I Don't Knowの略。文字入力すらめんどくさい時に。"
+  },
+  {
+    "id": 69,
+    "category": "Short & Quick",
+    "phrase": "Ofc",
+    "meaning": "もちろん / 当たり前っしょ",
+    "situation": "Of Courseの略。遊びの誘いに秒でレスする時。"
+  },
+  {
+    "id": 70,
+    "category": "Short & Quick",
+    "phrase": "Omg",
+    "meaning": "ヤバ / マジで",
+    "situation": "Oh My Godの略。説明不要、すべての感情の初期衝動。"
+  },
+  {
+    "id": 71,
+    "category": "Short & Quick",
+    "phrase": "Tbh",
+    "meaning": "はっきり言って / 正直",
+    "situation": "To Be Honestの略。DMで真面目なトーンで語る時の枕詞。"
+  },
+  {
+    "id": 72,
+    "category": "Short & Quick",
+    "phrase": "Rn",
+    "meaning": "今 / なう",
+    "situation": "Right Nowの略。「マックにいるrn（マックなう）」。"
+  },
+  {
+    "id": 73,
+    "category": "Short & Quick",
+    "phrase": "Bc",
+    "meaning": "だってお / なぜなら",
+    "situation": "Becauseの略。理由をチャットで短く説明する時。"
+  },
+  {
+    "id": 74,
+    "category": "Short & Quick",
+    "phrase": "Gotta go (Gtg)",
+    "meaning": "落ちるわ / バイバイ",
+    "situation": "Discordの通話を切る時や、飯の時間になった時。"
+  },
+  {
+    "id": 75,
+    "category": "Short & Quick",
+    "phrase": "On my way (Omw)",
+    "meaning": "向かってる / 今行く",
+    "situation": "遅刻しそうな時に「今向かってる！」と送る定番。"
+  },
+  {
+    "id": 76,
+    "category": "Short & Quick",
+    "phrase": "No worries.",
+    "meaning": "ドンマイ / 気にすんな",
+    "situation": "友達が遅刻の謝罪を入れてきた時の優しい返し。"
+  },
+  {
+    "id": 77,
+    "category": "Short & Quick",
+    "phrase": "Periodt.",
+    "meaning": "以上、終わりッ！",
+    "situation": "Periodの語尾に「t」をつけてさらに強調したトレンド表現。"
+  },
+  {
+    "id": 78,
+    "category": "Short & Quick",
+    "phrase": "Facts.",
+    "meaning": "それな（事実すぎる）",
+    "situation": "相手の言った正論に対して「まさにその通り」と返す。"
+  },
+  {
+    "id": 79,
+    "category": "Short & Quick",
+    "phrase": "Say less.",
+    "meaning": "全部わかった / 言うなそれ以上",
+    "situation": "「〇〇のチケットあるけど行く？」「Say less.（行くわ）」。"
+  },
+  {
+    "id": 80,
+    "category": "Short & Quick",
+    "phrase": "Keep it 100.",
+    "meaning": "ガチで行こう / 本音で",
+    "situation": "100%本気、本音で話そうぜという時のスラング。"
+  },
+  {
+    "id": 81,
+    "category": "Short & Quick",
+    "phrase": "Chill.",
+    "meaning": "おけ / まぁ落ち着け",
+    "situation": "軽い了解の意味でも、相手をなだめる意味でも使える万能薬。"
+  }
+]
