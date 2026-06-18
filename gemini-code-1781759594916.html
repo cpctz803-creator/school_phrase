@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本語から変換！Teen Slang Converter</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .neon-bg {
+            background: linear-gradient(135deg, #090d16 0%, #11102f 100%);
+        }
+        /* スクロールバーを非表示にするスタイル */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="neon-bg text-slate-100 min-h-screen font-sans">
+
+    <!-- ヘッダー兼 検索/変換エリア -->
+    <header class="text-center py-8 border-b border-slate-800 bg-slate-900/60 backdrop-blur-md sticky top-0 z-50 px-4">
+        <h1 class="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
+            Teen Slang Converter ⚡
+        </h1>
+        <p class="text-xs text-slate-400 mt-2">いつもの日本語を、今どきの英語スラングにリアルタイム変換！</p>
+        
+        <!-- 日本語入力・検索バー -->
+        <div class="max-w-xl mx-auto mt-6">
+            <div class="relative flex items-center">
+                <input type="text" id="searchInput" placeholder="例：「それな」「詰んだ」「ヤバい」「了解」..." 
+                       class="w-full px-5 py-3 rounded-2xl bg-slate-800/90 border border-slate-700 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 text-base font-bold shadow-inner">
+                <button id="clearBtn" class="absolute right-4 text-slate-500 hover:text-slate-300 hidden font-bold">✕</button>
+            </div>
+        </div>
+
+        <!-- クイック日本語タグ（中高生がよく使う言葉をワンタップで検索） -->
+        <div class="max-w-xl mx-auto mt-4 flex gap-1.5 overflow-x-auto no-scrollbar py-1">
+            <span class="text-xs text-slate-400 self-center whitespace-nowrap mr-1">人気のワード:</span>
+            <button class="quick-tag px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg text-xs font-semibold whitespace-nowrap transition" data-word="それな">それな</button>
+            <button class="quick-tag px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg text-xs font-semibold whitespace-nowrap transition" data-word="詰んだ">詰んだ</button>
+            <button class="quick-tag px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg text-xs font-semibold whitespace-nowrap transition" data-word="神">神</button>
+            <button class="quick-tag px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg text-xs font-semibold whitespace-nowrap transition" data-word="だるい">だるい</button>
+            <button class="quick-tag px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg text-xs font-semibold whitespace-nowrap transition" data-word="エモい">エモい</button>
+            <button class="quick-tag px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg text-xs font-semibold whitespace-nowrap transition" data-word="了解">了解</button>
+        </div>
+    </header>
+
+    <!-- メイン表示エリア -->
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <!-- 変換結果見出し -->
+        <div class="flex justify-between items-center mb-6 px-1">
+            <h2 class="text-sm font-bold text-slate-400 uppercase tracking-wider" id="resultCount">すべてのフレーズ一覧</h2>
+            <span class="text-xs text-slate-500">※カードをタップすると英語をコピー</span>
+        </div>
+
+        <div id="phraseGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- JSで動的にカードを挿入 -->
+            <p class="text-center text-slate-500 col-span-full py-12">データを読み込んでいます...</p>
+        </div>
+    </main>
+
+    <!-- クリップボードコピー通知 -->
+    <div id="toast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-full shadow-2xl font-bold text-sm tracking-wide opacity-0 transition-opacity duration-300 pointer-events-none z-50">
+        Copied Slang! ⚡
+    </div>
+
+    <!-- スクリプト処理 -->
+    <script>
+        let allPhrases = [];
+        const phraseGrid = document.getElementById('phraseGrid');
+        const searchInput = document.getElementById('searchInput');
+        const clearBtn = document.getElementById('clearBtn');
+        const resultCount = document.getElementById('resultCount');
+        const toast = document.getElementById('toast');
+        const quickTags = document.querySelectorAll('.quick-tag');
+
+        // 1. JSONデータのロード
+        async function loadPhrases() {
+            try {
+                // 同一階層の phrases.json を読み込み
+                const response = await fetch('phrases.json');
+                allPhrases = await response.json();
+                renderPhrases();
+            } catch (error) {
+                console.error('Error:', error);
+                phraseGrid.innerHTML = `<p class="text-center text-rose-500 col-span-full">データファイル(phrases.json)の読み込みに失敗しました。</p>`;
+            }
+        }
+
+        // 2. 日本語・キーワードからの変換（フィルタリング）と描画
+        function renderPhrases() {
+            const query = searchInput.value.trim().toLowerCase();
+            
+            // 検索文字がある場合はクリアボタンを表示
+            if (query.length > 0) {
+                clearBtn.classList.remove('hidden');
+                resultCount.innerText = `「${query}」の変換結果`;
+            } else {
+                clearBtn.classList.add('hidden');
+                resultCount.innerText = "すべてのフレーズ一覧";
+            }
+
+            // 日本語の「意味」や「シチュエーション」から検索
+            const filtered = allPhrases.filter(item => {
+                return (
+                    item.meaning.toLowerCase().includes(query) || 
+                    item.situation.toLowerCase().includes(query) ||
+                    item.phrase.toLowerCase().includes(query) ||
+                    item.category.toLowerCase().includes(query)
+                );
+            });
+
+            phraseGrid.innerHTML = '';
+
+            if (filtered.length === 0) {
+                phraseGrid.innerHTML = `
+                    <div class="text-center col-span-full py-12 bg-slate-900/30 rounded-2xl border border-slate-800 border-dashed">
+                        <p class="text-lg text-slate-400 font-bold mb-1">マッチするスラングが見つかりません 🥺</p>
+                        <p class="text-xs text-slate-600">他の日本語キーワードで試してみてね</p>
+                    </div>`;
+                return;
+            }
+
+            // カード生成
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'bg-slate-900/70 border border-slate-800/80 hover:border-cyan-500/50 rounded-2xl p-5 cursor-pointer transition-all duration-200 transform hover:-translate-y-1 hover:shadow-2xl flex flex-col justify-between active:scale-95 group';
+                
+                // タップした時に英語フレーズをクリップボードにコピー
+                card.onclick = () => copyToClipboard(item.phrase);
+
+                card.innerHTML = `
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-[10px] tracking-wider font-extrabold px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700/60 group-hover:bg-cyan-950 group-hover:text-cyan-400 group-hover:border-cyan-800 transition">
+                                ${item.category}
+                            </span>
+                            <span class="text-slate-700 text-xs font-mono font-bold">#${String(item.id).padStart(2, '0')}</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-0.5 font-semibold">英語では何て言う？ 👉</p>
+                        <h3 class="text-2xl font-black text-cyan-400 tracking-wide font-mono mb-2 group-hover:text-white transition select-all">${item.phrase}</h3>
+                    </div>
+                    <div class="mt-2 pt-2 border-t border-slate-800/60">
+                        <p class="text-sm font-bold text-pink-400 mb-1">意味: ${item.meaning}</p>
+                        <p class="text-xs text-slate-400 leading-relaxed bg-slate-950/50 p-2 rounded-xl mt-1.5">${item.situation}</p>
+                    </div>
+                `;
+                phraseGrid.appendChild(card);
+            });
+        }
+
+        // 3. コピー処理
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                toast.innerText = `「${text}」をコピーしたよ！ ⚡`;
+                toast.classList.remove('opacity-0');
+                toast.classList.add('opacity-100');
+                
+                setTimeout(() => {
+                    toast.classList.remove('opacity-100');
+                    toast.classList.add('opacity-0');
+                }, 1300);
+            }).catch(err => console.error('Copy failed:', err));
+        }
+
+        // 4. イベントリスナー群
+        searchInput.addEventListener('input', renderPhrases);
+
+        // クリアボタン
+        clearBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            renderPhrases();
+            searchInput.focus();
+        });
+
+        // クイックタグボタンの処理
+        quickTags.forEach(tag => {
+            tag.addEventListener('click', (e) => {
+                searchInput.value = e.target.getAttribute('data-word');
+                renderPhrases();
+            });
+        });
+
+        // アプリ起動
+        loadPhrases();
+    </script>
+</body>
+</html>
